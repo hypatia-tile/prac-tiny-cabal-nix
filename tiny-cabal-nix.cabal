@@ -18,3 +18,13 @@ executable tiny-cabal-nix
     tiny-cabal-nix
   default-language: GHC2021
   ghc-options: -Wall -Werror
+
+test-suite tiny-cabal-nix-test
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  hs-source-dirs: test
+  build-depends:
+    base >= 4.18 && < 5,
+    tiny-cabal-nix
+  default-language: GHC2021
+  ghc-options: -Wall -Werror
