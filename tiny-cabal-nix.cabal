@@ -3,10 +3,18 @@ name: tiny-cabal-nix
 version: 0.1.0.0
 build-type: Simple
 
+library
+  exposed-modules: Tiny.Greeting
+  hs-source-dirs: src
+  build-depends: base >= 4.18 && < 5
+  default-language: GHC2021
+  ghc-options: -Wall -Werror
+
 executable tiny-cabal-nix
   main-is: Main.hs
-  hs-source-dirs: app, src
-  other-modules: Tiny.Greeting
-  build-depends: base >= 4.18 && < 5
+  hs-source-dirs: app
+  build-depends:
+    base >= 4.18 && < 5,
+    tiny-cabal-nix
   default-language: GHC2021
   ghc-options: -Wall -Werror
