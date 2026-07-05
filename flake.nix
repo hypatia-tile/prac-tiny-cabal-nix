@@ -50,8 +50,12 @@
         ];
 
         nativeBuildInputs = [
-          pkgs.cabal-install
           hpkgs.ghc
+          hpkgs.hoogle
+          hpkgs.fast-tags
+          pkgs.cabal-install
+          pkgs.haskell-language-server
+          pkgs.fourmolu
         ];
       };
     });
